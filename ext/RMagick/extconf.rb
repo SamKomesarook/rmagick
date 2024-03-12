@@ -425,6 +425,8 @@ module RMagick
         f.puts "-I#{RbConfig::CONFIG['rubyhdrdir']}/ruby/backward"
         f.puts "-I#{RbConfig::CONFIG['rubyarchhdrdir']}"
         f.puts "-std=c++11"
+        f.puts "-Wno-incompatible-function-pointer-types"
+        f.puts "-Wno-int-conversion"
         define_flags.each { |flag| f.puts(flag) }
       end
     end
